@@ -26,17 +26,21 @@ Sys.setlocale("LC_TIME", "C")
 #Plot 4
 par(mfrow = c(2, 2))
 with(subSource, {
+	# 1-1
 	plot(DateTime, Global_active_power, type = "n", ylab = "Global Active Power", 
 		xlab = "")
 	lines(DateTime, Global_active_power)
+	# 1-2
 	plot(DateTime, Voltage, type = "n", ylab = "Voltage", xlab = "datetime")
 	lines(DateTime, Voltage)
+	# 2-1
 	plot(DateTime, Sub_metering_1, type = "n", ylab = "Energy sub metering", xlab = "")
 	lines(DateTime, Sub_metering_1)
 	lines(DateTime, Sub_metering_2, col = "red")
 	lines(DateTime, Sub_metering_3, col = "blue")
 	legend("topright", col = c("black", "red", "blue"), legend = c("Sub_metering_1", 
 		"Sub_metering_2", "Sub_metering_3"), lwd = 1.5, bty = "n")
+	# 2-2
 	plot(DateTime, Global_reactive_power, type = "n", ylab = "Global_reactive_power", 
 		xlab = "datetime")
 	lines(DateTime, Global_reactive_power)
